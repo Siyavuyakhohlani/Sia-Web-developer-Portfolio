@@ -858,7 +858,7 @@
                 <!-- Project 2 -->
                 <div class="project-card" data-category="security">
                     <div class="project-image">
-                        <img src="https://via.placeholder.com/600x400" alt="Project 2">
+                        <img src="/images/project images/hr.png" alt="Project 2">
                     </div>
                     <div class="project-info">
                         <h3>HR Management System</h3>
@@ -869,8 +869,8 @@
                             <span class="project-tag">MySql</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" target="_blank">Live Demo</a>
-                            <a href="#" target="_blank">View Code</a>
+                            <a href="https://hr-system-github-io.vercel.app/" target="_blank">Live Demo</a>
+                            <a href="https://github.com/Siyavuyakhohlani/HR-Management-system.git" target="_blank">View Code</a>
                         </div>
                     </div>
                 </div>
@@ -882,15 +882,15 @@
                     <div class="project-info">
                         <h3>Enterprise Sytem Report Dashboard</h3>
                         <p>Provides a comprehensive analysis report of sales performance, customer value trends,
-                            and inventory efficiency to guide strategic decision-making.</p>
+                            and inventory efficiency to guide strategic decision-making through Apex Oracle.</p>
                         <div class="project-tags">
                             <span class="project-tag">Apex Oracle</span>
                             <span class="project-tag">Sql</span>
                             <span class="project-tag">html</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" target="_blank">Live Demo</a>
-                            <a href="#" target="_blank">View Code</a>
+                            <a href="https://apex.oracle.com/pls/apex/r/life_choices_sk/business-insight-analytics/login?session=32256663970" target="_blank">Live Demo</a>
+                            <a href="https://github.com/Siyavuyakhohlani/Business-analysis-Apex-Oracle-.git" target="_blank">View Code</a>
                         </div>
                     </div>
                 </div>
@@ -931,22 +931,22 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form id="contactForm" action="https://formsubmit.co/siyavuyakhohlani2@gmail.com" method="POST">
                         <div class="form-group">
                             <label for="name">Your Name</label>
-                            <input type="text" id="name" class="form-control" required>
+                            <input type="text" id="name" name="name" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Your Email</label>
-                            <input type="email" id="email" class="form-control" required>
+                            <input type="email" id="email" name="email" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="subject">Subject</label>
-                            <input type="text" id="subject" class="form-control" required>
+                            <input type="text" id="subject" name="subject" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" class="form-control" required></textarea>
+                            <textarea id="message" name="message" class="form-control" required></textarea>
                         </div>
                         <button type="submit" class="submit-btn">Send Message</button>
                     </form>
@@ -1006,7 +1006,8 @@
             "Full Stack Developer",
             "Security Analyst",
             "Vue.js Specialist",
-            "Cybersecurity Enthusiast"
+            "Cybersecurity Enthusiast",
+            "SQL Developer"
         ];
         let phraseIndex = 0;
         let charIndex = 0;
@@ -1076,25 +1077,33 @@
             });
         });
 
-        // Form submission
         const contactForm = document.getElementById('contactForm');
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            // Here you would typically send the form data to a server
-            // For this example, we'll just log it and show an alert
-            console.log({ name, email, subject, message });
-            alert('Thank you for your message! I will get back to you soon.');
-            
-            // Reset the form
-            contactForm.reset();
+        e.preventDefault();
+        this.submit(); // Manually submit to FormSubmit
+        alert('Thank you for your message! I will get back to you soon.');
+        this.reset();
         });
+
+        // Form submission
+        // const contactForm = document.getElementById('contactForm');
+        // contactForm.addEventListener('submit', function(e) {
+        //     e.preventDefault();
+            
+        //     // Get form values
+        //     const name = document.getElementById('name').value;
+        //     const email = document.getElementById('email').value;
+        //     const subject = document.getElementById('subject').value;
+        //     const message = document.getElementById('message').value;
+            
+        //     // Here you would typically send the form data to a server
+        //     // For this example, we'll just log it and show an alert
+        //     console.log({ name, email, subject, message });
+        //     alert('Thank you for your message! I will get back to you soon.');
+            
+        //     // Reset the form
+        //     contactForm.reset();
+        // });
 
         // Animate elements when scrolling
         window.addEventListener('scroll', () => {
